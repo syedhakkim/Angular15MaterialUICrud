@@ -1,0 +1,32 @@
+{
+  "empList": [
+    {
+      "empName": "manoj",
+      "designation": "Salesman",
+      "dateofjoining": "2023-01-16T18:30:00.000Z",
+      "gender": "Male",
+      "age": 23,
+      "description": "22",
+      "id": 7
+    },
+    {
+      "empName": "abul",
+      "designation": "Salesman",
+      "dateofjoining": "2023-01-16T18:30:00.000Z",
+      "gender": "Male",
+      "age": 25,
+      "description": "hai sir",
+      "id": 8
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

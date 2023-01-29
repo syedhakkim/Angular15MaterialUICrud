@@ -1,0 +1,54 @@
+
+<div mat-dialog-content>
+    <h1>Add Employee</h1>
+
+    <form [formGroup]="empForm">
+<mat-form-field appearance="outline">
+    <mat-label>Employee Name</mat-label>
+    <input formControlName="empName"  matInput placeholder="Name">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+        <mat-label>Designation</mat-label>
+        <mat-select formControlName="designation" >
+            <mat-option value="Manager">Manager</mat-option>
+            <mat-option value=">Accountant">Accountant</mat-option>
+            <mat-option value="Salesman">Salesman</mat-option>
+            <mat-option value="Office Assistant">Office Assistant</mat-option>
+        </mat-select>
+     
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Date of Joining</mat-label>
+            <input matInput placeholder="select">
+            <input formControlName="dateofjoining" matInput [matDatepicker]="picker">
+         
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+             </mat-form-field>
+
+             <label for=""><h1>Gender</h1></label>
+             <mat-radio-group formControlName="gender" class="example-radio-group">
+                <mat-radio-button  class="example-radio-button" *ngFor="let Gender of genderlist" [value]="Gender"  >
+                    {{Gender }}
+                    </mat-radio-button>  
+             </mat-radio-group>
+             <mat-form-field appearance="outline">
+                <mat-label>Age</mat-label>
+                <input matInput type="number" formControlName="age" placeholder="Age">
+                  </mat-form-field>
+          
+
+             <mat-form-field appearance="outline">
+                <mat-label>Description</mat-label>
+                <textarea formControlName="description" matInput>          </textarea>
+                  </mat-form-field>
+      
+                </form>
+</div>
+
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close> Close</button>
+    <button mat-raised-button color="primary" (click)="addEmployee()">{{actionbtn}}</button>
+</div>
